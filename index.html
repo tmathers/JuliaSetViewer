@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Julia Set Viewer</title>
+	<script type="text/javascript" src="./js/julia.js"></script>
+
+</head>
+
+<body onload="initialize()">
+
+
+	<header class="aui-page-header">
+        	<div class="aui-page-header-inner">
+
+            		<div class="aui-page-header-main">
+				<h1> Julia Set Viewer</h1>
+				<h2> By Tara Mathers</h2>
+			</div>
+		</div>
+	</header>
+	
+	<div class="aui-page-panel">
+  
+		<section class="aui-page-panel-content">
+
+			<canvas id="julia" WIDTH="700" height="550">
+				Your browser does not support the HTML5 canvas element.
+			</canvas>
+
+			<canvas id="mandelbrot" WIDTH="500" height="450">
+				Your browser does not support the HTML5 canvas element.
+			</canvas>
+
+			<p><code>c = <span id="c-val"></span></code></p>
+
+			<p> Color Cycling: </p>
+			<form name = "form">
+				<input name = "cycle" type="radio"/> On 
+				<input name = "cycle" type="radio" checked = "checked" /> Off
+				<br /> 
+				<input name = "direction" type="radio" checked = "checked"> In
+				<input name = "direction" type="radio" /> Out 
+				<br />
+				Iterations:
+				<input name = "iterations" type="radio" onClick = "setIterations()" checked = "checked" /> 256 
+				<input name = "iterations" type="radio" onClick = "setIterations()" /> 512 
+				<input name = "iterations" type="radio" onClick = "setIterations()" /> 1024
+			</form>
+			
+			<p>The left hand plot displays the Julia set for the corresponding <code>c</code> value 
+			of the selected point on the Mandelbrot set (right). Mouse over the Mandelbrot image to change
+			the value.</p>
+				
+		</section>
+	</div>
+
+
+</body>
+
+</html>
